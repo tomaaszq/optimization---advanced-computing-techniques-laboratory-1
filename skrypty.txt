@@ -1,0 +1,37 @@
+LAB2
+Zadanie1:
+
+f=[2;-3];
+A=[3 -4;2 4];
+b=[-2;6];
+lb=[0;0];
+options = optimset('largescale','off','simplex','on');
+
+[x,fval,exitflag,output,lambda] = linprog(f,A,b,[],[],lb,[],[],options)
+
+
+zadanie 2:
+f=[3;3];
+A=[-5 2;2 6];
+b=[1;-7];
+lb=[0;0];
+options = optimset('largescale','off','simplex','on');
+
+[x,fval,exitflag,output,lambda] = linprog(f,A,b,[],[],lb,[],[],options)
+
+zadanie3:
+f=[2;3];
+A=[2 4;-3 2];
+b=[4;6];
+lb=[-inf;0];
+options = optimset('largescale','off','simplex','on');
+
+[x,fval,exitflag,output,lambda] = linprog(f,A,b,[],[],lb,[],[],options)
+
+zadanie4:
+f=[10;-5;-15];
+A=[2 6 2;10 -8 6;0 0 -2];
+b=[40;16;-10];
+lb=[0;0;0];
+intcon=[1,2,3];
+[x,fval,exitflag,output] = intlinprog(f,intcon,A,b,[],[],lb)
